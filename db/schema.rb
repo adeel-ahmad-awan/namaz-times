@@ -10,13 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171009133216) do
+ActiveRecord::Schema.define(version: 20171010062733) do
 
   create_table "masjids", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "timings", force: :cascade do |t|
+    t.date     "day"
+    t.datetime "fajar"
+    t.datetime "zohar"
+    t.datetime "asar"
+    t.datetime "magrib"
+    t.datetime "isha"
+    t.integer  "masjid_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["masjid_id"], name: "index_timings_on_masjid_id"
   end
 
 end

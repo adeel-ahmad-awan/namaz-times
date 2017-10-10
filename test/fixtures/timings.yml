@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2017-10-10
+  fajar: 2017-10-10 11:27:33
+  zohar: 2017-10-10 11:27:33
+  asar: 2017-10-10 11:27:33
+  magrib: 2017-10-10 11:27:33
+  isha: 2017-10-10 11:27:33
+  masjid: one
+
+two:
+  day: 2017-10-10
+  fajar: 2017-10-10 11:27:33
+  zohar: 2017-10-10 11:27:33
+  asar: 2017-10-10 11:27:33
+  magrib: 2017-10-10 11:27:33
+  isha: 2017-10-10 11:27:33
+  masjid: two

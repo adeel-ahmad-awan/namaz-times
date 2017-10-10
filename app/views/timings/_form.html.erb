@@ -1,0 +1,38 @@
+<%= form_for [@masjid, @masjid.timings.build], :html => { :class => "form-horizontal masjid" } do |f| %>
+
+<div class="form-group row">
+  <%= f.label :date %>
+  <%= f.date_field :day, :value => Time.now %>
+</div>
+
+<div class="form-group row">
+  <%= f.label :fajar %>
+  <%= f.time_select :fajar %>
+</div>
+
+<div class="form-group row">
+  <%= f.label :zohar %>
+  <%= f.time_select :zohar %>
+</div>
+
+<div class="form-group row">
+  <%= f.label :asar %>
+  <%= f.time_select :asar %>
+</div>
+
+<div class="form-group row">
+  <%= f.label :magrib %>
+  <%= f.time_select :magrib %>
+</div>
+
+<div class="form-group row">
+  <%= f.label :isha %>
+  <%= f.time_select :isha %>
+</div>
+
+<div class="form-group row">
+  <%= f.submit :class => 'btn btn-primary btn-xs' %>
+</div>
+
+
+<% end %>

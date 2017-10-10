@@ -10,6 +10,7 @@
   <dd><%= @masjid.address %></dd>
 </dl>
 
+
 <%= link_to t('.back', :default => t("helpers.links.back")),
               masjids_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -19,3 +20,11 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+
+<div class="show_timings">
+  <%= render "timings/timing", :masjid => @masjid %>
+</div>
+
+<div class="add_timings">
+  <%= render "timings/form" %>
+</div>

@@ -1,0 +1,27 @@
+<table class="table table-sm table-inverse">
+  <thead>
+    <tr>
+      <th>date</th>
+      <th>fajar time</th>
+      <th>zohar time</th>
+      <th>asar time</th>
+      <th>magrib time</th>
+      <th>isha time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% masjid.timings.each do |timing| %>
+      <tr>
+        <th scope="row"><%= timing.day %></th>
+        <td><%= timing.fajar %></td>
+        <td><%= timing.zohar %></td>
+        <td><%= timing.asar %></td>
+        <td><%= timing.magrib %></td>
+        <td><%= timing.isha %></td>
+        <td><%= link_to 'delete', [timing.masjid, timing],
+          method: :delete,
+          class: "btn btn-danger btn-sm"  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
